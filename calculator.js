@@ -58,11 +58,14 @@ deleteButton.addEventListener('click', function(event) {
             lastCharacter = '';
             decimal = 0;
             // console.log(numScreen.textContent.slice(0, numScreen.textContent.length - 1))
-        } else {
+        } else if (lastCharacter === ''){
             numScreen.textContent = numScreen.textContent = numScreen.textContent.slice(0, numScreen.textContent.length - 1);
             lastCharacter = 'operator';
             decimal = 1;
             // console.log(numScreen.textContent.slice(0, numScreen.textContent.length - 1))
+        } else {
+            numScreen.textContent = numScreen.textContent = numScreen.textContent.slice(0, numScreen.textContent.length - 1);
+            decimal = 0;
         }
 })
 
@@ -101,16 +104,15 @@ Array.from(operations).forEach(function(operationsButton){
                 lastCharacter = 'operator';
                 decimal = 0;
                 operatorClicked = true;
+                console.log(decimal)
             }
-        } else if (lastCharacter === 'operator') {
-            decimal = 0;
         }
 
         if(decimal === 0) {
             if(classes.contains('decimal')) {
                 numScreen.textContent += '.'
                 decimal = 1;
-                console.log(decimal)
+                lastCharacter = 'decimal';
             }
         }
 
@@ -118,7 +120,7 @@ Array.from(operations).forEach(function(operationsButton){
 })
 
 equal.addEventListener('click', (event) => {
-    lastCharacter = 'answer';
+    lastCharacter = '';
     const numberList = numScreen.textContent.trim().split(' ');
 
     let acccumulator = numberList[0];

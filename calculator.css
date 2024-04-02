@@ -6,6 +6,7 @@
     width: 500px;
 
     border: 3px solid black;
+    border-radius: 30px;
 }
 
 .screen {
@@ -23,24 +24,30 @@
     background-color: #318AC5;
     margin: 6px;
     padding: 3px;
+    border-radius: 30px;
 }
 
 .delete {
-    background-color: grey;
+    background-color: #805068;
+    color: #212728;
 }
 
 .clear:hover,
 .button:hover {
-    background-color: #1397F0;
+    background-color: #D5B2C3;
+    cursor: pointer;
 }
 
 
 .cell-rows {
     display: flex;
     flex-direction: row;
+    background-color: #D4478E;
+    border-radius: 0 0 30px 30px;
 }
 
 .screen-button {
+    border-bottom: 2px solid;
     width: 500px;
     height: 100px;
     display: flex;
@@ -58,6 +65,8 @@
     justify-content: center;
     align-items: center;
     font-size: 40px;
+    border-radius: 30px;
+    background-color: #FFAAD4;
 }
 
 * {
@@ -65,8 +74,9 @@
 }
 
 .division {
-    height: 95px;
-    width: 121px;
+    height: 66px;
+    width: 66px;
+
 }
 
 .multiplication {
@@ -80,4 +90,16 @@
 
 .subtraction {
     font-size: 80px;
+}
+
+.equal {
+    background-color: green;
+}
+
+.clear {
+    background-color: #AA8799;
+}
+
+.operations {
+    background-color: #507A80;
 }
