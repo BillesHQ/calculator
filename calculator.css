@@ -2,33 +2,62 @@
     display: flex;
     flex-direction: column;
 
-
-    height: 500px;
+    height: 507px;
     width: 500px;
 
-    border: 2px solid black;
+    border: 3px solid black;
 }
 
 .screen {
-    width: 500px;
-    height: 100px;
-    border: inherit;
+    height: 38px;
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 7px;
 }
+
+.clear, .delete {
+    display: flex;
+    border: 1px solid black;
+    align-self: flex-start;
+    background-color: #318AC5;
+    margin: 6px;
+    padding: 3px;
+}
+
+.delete {
+    background-color: grey;
+}
+
+.clear:hover,
+.button:hover {
+    background-color: #1397F0;
+}
+
 
 .cell-rows {
     display: flex;
     flex-direction: row;
 }
 
+.screen-button {
+    width: 500px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .button {
-    height: 95px;
+    height: 98px;
     width: 121px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
-
 }
 
 * {
